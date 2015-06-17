@@ -10,6 +10,11 @@ handler for the events. This gives enough flexibility for custom applications,
 but also removes a lot of boiler plate code that would be the same across all
 clients.
 
+First off, install the `cred-client` package with,
+
+1. `$ pip install cred-client`
+
+
 For a more full example, see the `example.py` file. The following will be a
 superficial rundown of the example. First we subclass the
 `cred.client.ClientBase` class,
