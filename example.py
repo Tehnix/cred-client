@@ -9,7 +9,7 @@ from cred.client import ClientBase
 
 
 class MyClient(ClientBase):
-    """Implement the handle_event method."""
+    """Subclass ClientBase, and implement the handle_event method."""
 
     def handle_event(self, event):
         """Act on an event here."""
@@ -18,7 +18,7 @@ class MyClient(ClientBase):
         )
 
 
-# Our configuration
+# Configure the client application
 hostname = 'http://127.0.0.1:5000'
 apikey = 'qWqa7nhoYdeJIX5FIJwb4Q4bjM79hNUF6GFh8kQt6uE'
 device = 'Client Library'
@@ -27,10 +27,13 @@ subscribe = {
     'Temperature': {}
 }
 
+# Instantiate, authenticate and start pulling for events
 client = MyClient(hostname, apikey, device, location, subscribe)
 auth = client.authenticate()
 event_daemon = client.start_pulling_subscribedevents()
+
+# Post an event every 2 seconds in a while loop, which also blocks the program
+# so it doesn't exit immediately
 while True:
-    # Post an event every 2 seconds
     client.submit_event('Test', 'Performing a test', 'True')
     time.sleep(2)
