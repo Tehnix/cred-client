@@ -7,7 +7,7 @@ if sys.version_info < (3,):
     print("I'm only for 3, please upgrade")
     sys.exit(1)
 
-version = '0.2.3'
+version = '0.2.4'
 
 setup(
     name='cred-client',
@@ -15,7 +15,8 @@ setup(
     author='Tehnix',
     author_email='ckl@codetalk.io',
     packages=[
-        'cred'
+        'cred',
+        'cred.client'
     ],
     scripts=[],
     url='https://github.com/Tehnix/cred-client',
