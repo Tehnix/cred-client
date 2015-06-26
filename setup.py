@@ -7,7 +7,7 @@ if sys.version_info < (3,):
     print("I'm only for 3, please upgrade")
     sys.exit(1)
 
-version = '0.2.5'
+version = '0.2.6'
 
 setup(
     name='cred-client',
@@ -23,7 +23,7 @@ setup(
     description='Client Library for cred-server.',
     # long_description=open('README.md').read(),
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
