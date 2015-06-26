@@ -16,7 +16,7 @@ First off, install the `cred-client` package with,
 
 
 For a more full example, see the `example.py` file. The following will be a
-superficial rundown of the example. First we subclass the
+superficial rundown. First we subclass the
 `cred.client.ClientBase` class,
 
 
